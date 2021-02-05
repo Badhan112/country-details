@@ -5,4 +5,31 @@ header{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 30px;
+    margin: 20px;
+}
+#country-details{
+    text-align: center;
+    background-color: rgba(233, 233, 233, 0.5);
+    padding: 50px 0;
+    display: none;
+    margin: 30px;
+    border-radius: 20px;
+}
+#flagImg{
+    width: 200px;
+}
+.detail-info{
+    display: flex;
+    text-align: left;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+.detail-info > div{
+    padding: 30px;
+    width: 300px;
+    background-color: white;
+    border-radius: 20px;
+}
+#temp-icon{
+    width: 100px;
 }
