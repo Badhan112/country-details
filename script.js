@@ -1,5 +1,5 @@
 async function getWeatherDetails(latitude, longitude){
-    const api = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=b64a25b4f18cef27a91e53b857bd84fb`;
+    const api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=b64a25b4f18cef27a91e53b857bd84fb`;
     const response = await fetch(api);
     const data = await response.json();
     return data;
@@ -8,7 +8,7 @@ async function getWeatherDetails(latitude, longitude){
 
 function displayWeatherCondition(latitude, longitude){
     getWeatherDetails(latitude, longitude).then(data => {
-        const iconSrc = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+        const iconSrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
         document.getElementById("temp-icon").setAttribute("src", iconSrc);
         document.getElementById("temp").innerText = data.main.temp;
         document.getElementById("feels-like").innerText = data.main.feels_like;
